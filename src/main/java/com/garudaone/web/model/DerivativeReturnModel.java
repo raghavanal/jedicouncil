@@ -1,10 +1,12 @@
 package com.garudaone.web.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Date;
 
 public class DerivativeReturnModel {
 
-    private String Symbol;
+    @SerializedName("date")
     private Date tradeDate;
     private Double openPrice;
     private Double highPrice;
@@ -13,13 +15,7 @@ public class DerivativeReturnModel {
     private int Volume;
     private int openInterest;
 
-    public String getSymbol() {
-        return Symbol;
-    }
 
-    public void setSymbol(String symbol) {
-        Symbol = symbol;
-    }
 
     public Date getTradeDate() {
         return tradeDate;
